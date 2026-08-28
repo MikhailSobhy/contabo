@@ -12,7 +12,7 @@ pipeline {
                     echo "Restarting Odoo..."
                     sudo systemctl restart odoo
 
-                    echo "Deployment finished successfully."
+                    echo "Deployment finished successfully.."
                 '''
             }
         }
