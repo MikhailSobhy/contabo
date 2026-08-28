@@ -2,11 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('Test Permissions') {
             steps {
-                sh 'whoami'
-                sh 'pwd'
-                sh 'hostname'
+                sh '''
+                    echo "Running as:"
+                    whoami
+
+                    echo "Testing write permission..."
+                    touch /opt/odoo/custom-addons/jenkins-test
+
+                    echo "File created:"
+                    ls -l /opt/odoo/custom-addons/jenkins-test
+                '''
             }
         }
     }
