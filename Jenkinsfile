@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'Hello from GitHub Jenkinsfile!'
+                echo 'Hello from GitHub Jenkinsfile! Mikha'
             }
         }
     }
