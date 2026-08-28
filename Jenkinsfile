@@ -9,7 +9,7 @@ pipeline {
 
                     sudo -u odoo git -C /opt/odoo/custom-addons pull origin main
 
-                    echo "Deployment finished."
+                    echo "Deployment finished.."
                 '''
             }
         }
