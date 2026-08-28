@@ -7,9 +7,12 @@ pipeline {
                 sh '''
                     echo "Starting deployment..."
 
-                    sudo -u odoo git -C /opt/odoo/custom-addons pull origin main
+                    sudo -u odoo /usr/bin/git -C /opt/odoo/custom-addons pull origin main
 
-                    echo "Deployment finished.."
+                    echo "Restarting Odoo..."
+                    sudo systemctl restart odoo
+
+                    echo "Deployment finished successfully."
                 '''
             }
         }
