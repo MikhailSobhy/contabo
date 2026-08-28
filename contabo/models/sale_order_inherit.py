@@ -6,3 +6,4 @@ class SaleOrder(models.Model):
     contabo = fields.Char()
     server_text = fields.Char()
     another_field = fields.Char()
+    jenkins = fields.Char()

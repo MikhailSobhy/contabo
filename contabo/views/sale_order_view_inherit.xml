@@ -10,6 +10,7 @@
                 <field name="contabo"/>
                 <field name="server_text"/>
                 <field name="another_field"/>
+                <field name="jenkins"/>
             </xpath>
 
         </field>
