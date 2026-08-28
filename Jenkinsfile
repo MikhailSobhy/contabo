@@ -2,17 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Test Permissions') {
+        stage('Deploy') {
             steps {
                 sh '''
-                    echo "Running as:"
-                    whoami
+                    echo "Starting deployment..."
 
-                    echo "Testing write permission..."
-                    touch /opt/odoo/custom-addons/jenkins-test
+                    sudo -u odoo git -C /opt/odoo/custom-addons pull origin main
 
-                    echo "File created:"
-                    ls -l /opt/odoo/custom-addons/jenkins-test
+                    echo "Deployment finished."
                 '''
             }
         }
